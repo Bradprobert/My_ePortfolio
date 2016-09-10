@@ -1,0 +1,120 @@
+$font-stack: 'Open Sans', sans-serif
+$p-text-color: #ff4e4e
+
+.font
+//font: 100% $font-stack
+
+.font-color
+  color: $p-text-color
+
+#navbar
+  background-color: dimgray
+  border: none
+  border-radius: 0
+  padding: 0
+  margin: 0
+
+
+a.navbar-brand.brand
+  color: $p-text-color
+  font-family: 'Open Sans', sans-serif
+  font-size: 25px
+  line-height: 25px
+  font-weight: 300
+  letter-spacing: 4px
+  text-transform: uppercase
+  z-index: 2
+  &hover
+    box-shadow: 10px 10px 5px black
+
+@media (max-width: 1100px)
+  .navbar-header
+    float: none
+  .navbar-left, .navbar-right
+    float: none !important
+  .navbar-toggle
+    display: block
+  .navbar-collapse
+    border-top: 1px solid transparent
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+  .navbar-fixed-top
+    top: 0
+    border-width: 0 0 1px
+  .navbar-collapse.collapse
+    display: none !important
+  .navbar-nav
+    float: none !important
+    margin-top: 7.5px
+    > li
+      float: none
+      > a
+        padding-top: 10px
+        padding-bottom: 10px
+  .collapse.in
+    display: block !important
+
+.collapse.navbar-collapse.nav-items-wrapper
+  margin: 0
+  padding-right: 10px
+  padding-left: 10px
+
+button.navbar-toggle
+  .icon-bar
+    background-color: $p-text-color
+    &:nth-of-type(3)
+      top: 1px
+    &:nth-of-type(4)
+      top: 2px
+    position: relative
+    transition: all 500ms ease-in-out
+  &.active .icon-bar
+    &:nth-of-type(2)
+      top: 6px
+      transform: rotate(45deg)
+    &:nth-of-type(3)
+      background-color: transparent
+    &:nth-of-type(4)
+      top: -6px
+      transform: rotate(-45deg)
+
+header
+  background: no-repeat fixed
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 46, 46, 0.32), black), url(../../main/new_york_skyline-wide.jpg)
+  background-image: linear-gradient(180deg, rgba(255, 46, 46, 0.32), black), url(../../main/new_york_skyline-wide.jpg)
+  background-size: cover
+  border-bottom: 4px solid $p-text-color
+  background-position: 0 0, 50% 50%
+  text-align: center
+  height: 500px
+  p
+    color: #ffffff
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 60px
+    letter-spacing: 2px
+
+  .intro-text
+    position: relative
+    width: 100%
+    h3
+      font: $font-stack
+      font-size: 50px
+      text-transform: uppercase
+      color: white
+      font-weight: 300
+    .on-image
+      text-align: center
+    @media (min-width: 544px)
+      padding: 125px 0
+    @media (min-width: 768px)
+      padding: 150px 0
+    @media (min-width: 992px)
+      padding: 225px 0
+    @media (min-width: 1200px)
+      padding: 250px 0
+
+#header-text
+  width: 55%
+  border-radius: 8%
+  margin: auto
+
